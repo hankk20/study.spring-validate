@@ -1,0 +1,6 @@
+logging:
+  level:
+    root: debug
+spring:
+  messages:
+    basename: error_message
