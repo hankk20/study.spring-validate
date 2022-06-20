@@ -10,13 +10,13 @@ import javax.validation.constraints.*;
 public class MemberJoinRequest {
 
     @NotBlank(message = "{custom.notblank} [{field.name}]")
-    @Length(max = 10)
+    @Size(max = 10)
     private String name;
 
-    @NotBlank @Email
+    @NotBlank @Email @Size(max=5)
     private String email;
 
-    @NotBlank(message = "{custom.notblank}") @Max(11)
+    @NotBlank(message = "{custom.notblank}") @Size(min = 0, max = 11)
     private String phoneNumber;
 
     @NotBlank
